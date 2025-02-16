@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media Manager</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        background-color: rgba(203, 200, 200, 0.907);
+      }
+
+      .navbar {
+        background-color: rgb(0, 0, 0);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.975);
+        padding: 10px 0;
+      }
+
+      .container img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+      }
+
+      .container h2 {
+        color: rgb(93, 80, 68);
+        font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+        font-size: 25px;
+        margin-left: 10px;
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+        font-size: 2rem;
+        color: #f5a623;
+        transition: color 0.3s ease;
+      }
+
+      .container1 {
+        width: 70%;
+        margin: 40px auto;
+        padding: 10px;
+        background-color: #785b3952;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .information {
+        width: 100%;
+      }
+
+      .information h3 {
+        color: #ffffff;
+        font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+        font-weight: bolder;
+        margin-left: 10px;
+        font-size: 22px;
+        margin-top: 15px;
+      }
+
+      .information p {
+        color: #fff;
+        font-family: "Times New Roman", Times, serif;
+        margin-left: 10px;
+        margin-top: 24px;
+        font-size: 15px;
+        font-style: oblique;
+      }
+
+      .image-container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .image-container img {
+        width: 70%;
+        max-width: 250px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.975);
+      }
+
+      .charts {
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .charts img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.975);
+      }
+
+      #contact {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 1.5rem;
+        background-color: #785b3952;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      #contact h2 {
+        font-size: 1.75rem;
+        color: #fff;
+        margin-bottom: 0.5rem;
+      }
+
+      #contact p {
+        font-size: 1rem;
+        color: #fff;
+        margin-bottom: 1.5rem;
+      }
+
+      #contactForm input,
+      #contactForm textarea {
+        width: 100%;
+        max-width: 500px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        background-color: #785b3952;
+        border-color: #664f3574;
+      }
+
+      #contactForm textarea {
+        resize: none;
+        background-color: #785b3952;
+        border: #664f3574;
+      }
+
+      #contactForm .btn {
+        background-color: #664f3574;
+        color: white;
+        font-size: 0.9rem;
+        padding: 0.5rem 1.2rem;
+        border: none;
+        border-radius: 4px;
+        border-color: #664f3574;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin: 0 auto;
+        display: block;
+      }
+
+      #contactForm .btn:hover {
+        background-color: #664f351c;
+      }
+
+      footer {
+        background: #1f1f1f;
+        color: rgb(93, 80, 68);
+        font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+        font-size: 18px;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      .back-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: rgb(93, 80, 68);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .back-button:hover {
+        background-color: rgb(84, 72, 60);
+      }
+
+      @media (min-width: 768px) {
+        .container1 {
+          flex-direction: row;
+          align-items: flex-start;
+        }
+
+        .information {
+          width: 50%;
+        }
+
+        .image-container {
+          width: 50%;
+        }
+
+        .image-container img {
+          max-width: 100%;
+        }
+
+        .charts img {
+          width: 45%;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .charts img {
+          width: 22%;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .container1 {
+          flex-direction: column;
+          width: 90%;
+          text-align: center;
+        }
+
+        .information {
+          width: 100%;
+        }
+
+        .image-container {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+
+        .image-container img {
+          width: 100%;
+          max-width: 500px;
+          height: 500px;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a href="./index.html">
+          <img src="./images/Blue Modern Personal Logo.png" alt="Logo Design" />
+        </a>
+        <h2 class="logoname">EngageSphere</h2>
+      </div>
+    </nav>
+
+    <section id="cards">
+      <div class="flex-container">
+        <div class="container1">
+          <div class="information">
+            <div class="text-container">
+              <h3>
+                "Expert Social Media Management Services: Hire a Pro to Boost
+                Your Brand"
+              </h3>
+              <p>
+                Social media management involves planning, executing, and
+                analyzing online activities to enhance a brand's presence. It
+                includes tasks like creating posts, engaging with followers,
+                tracking performance, and optimizing platforms like Instagram,
+                Facebook, Twitter, and LinkedIn to ensure content aligns with a
+                brand's goals.
+              </p>
+              <p>
+                Social media is essential for connecting with your audience and
+                growing your business. Effective management builds brand
+                awareness, engages customers, and drives traffic. Without it,
+                brands miss opportunities to connect, increase visibility, and
+                remain competitive. Outsourcing social media
+              </p>
+              <p>
+                At EngageSphere, we provide tailored social media management
+                services, from content creation and scheduling to community
+                engagement and performance tracking. Our team customizes
+                strategies to fit your business goals, amplifying your brand’s
+                presence and driving results, while you enjoy increased
+                awareness and customer loyalty.
+              </p>
+            </div>
+          </div>
+          <div class="image-container">
+            <img src="./images/socialmedia1.jpg" alt="Social Media Manager" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="charts">
+      <img src="./images/1e6e9c2e6c0b4fb03b7a30d298999f43.jpg" alt="Image 1" />
+      <img src="./images/de74856729ebf5da549a70a7b295132c.jpg" alt="Image 2" />
+      <img src="./images/afd08e4999012031ac416f4b2d35f9c3.jpg" alt="Image 3" />
+      <img src="./images/0a556e0700b1e37d7ddceb730e1f9d37.jpg" alt="Image 4" />
+    </section>
+
+    <section id="contact" class="container my-5">
+      <div class="text-center mb-5">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you. Get in touch with us today!</p>
+      </div>
+      <form
+        id="contactForm"
+        class="w-75 mx-auto"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        onsubmit="clearForm()"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="874131d7-6f2b-4677-9c7a-85e61e6f5d42"
+        />
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea
+            class="form-control"
+            id="message"
+            name="message"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 SM Manager Seeker. All Rights Reserved</p>
+    </footer>
+
+    <button class="back-button" onclick="goBack()">Back</button>
+
+    <script>
+      function goBack() {
+        window.location.href = "index.html";
+      }
+
+      function clearForm() {
+        document.getElementById("contactForm").reset();
+      }
+    </script>
+  </body>
+</html>

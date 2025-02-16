@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media Manager</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="analytics.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a href="./index.html">
+          <img src="./images/Blue Modern Personal Logo.png" alt="Logo Design" />
+        </a>
+        <h2 class="logoname">EngageSphere</h2>
+      </div>
+    </nav>
+
+    <section id="cards">
+      <div class="flex-container">
+        <div class="container1">
+          <div class="information">
+            <div class="text-container">
+              <h3>Analytics & Reporting by Social Media Experts</h3>
+              <p>
+                A social media analytics specialist tracks and analyzes key
+                performance data to help businesses optimize their strategies.
+                They monitor engagement, audience behavior, and campaign
+                success, turning data into actionable insights.
+              </p>
+              <p>
+                Hiring an expert ensures you don’t miss growth opportunities.
+                They identify trends, strengths, and areas for improvement,
+                helping you refine your approach for better engagement, ROI, and
+                brand impact.
+              </p>
+              <p>
+                Our specialists provide detailed reports, competitor analysis,
+                and strategic recommendations tailored to your goals. With
+                expert guidance, you can make data-driven decisions to boost
+                your social media success.
+              </p>
+            </div>
+          </div>
+          <div class="image-container">
+            <img
+              src="./images/analyticsimg3.jpg"
+              alt="Analytics and Reporting"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="charts">
+      <img src="./images/analyticsimg1.jpg" alt="Image 1" />
+      <img src="./images/analyticsimg2.jpg" alt="Image 2" />
+      <img src="./images/7637c246392da89e106d50b274bc3ef4.jpg" alt="Image 3" />
+      <img src="./images/image4.jpg" alt="Image 4"  />
+    </section>
+    <section id="contact" class="container my-5">
+      <div class="text-center mb-5">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you. Get in touch with us today!</p>
+      </div>
+      <form
+        id="contactForm"
+        class="w-75 mx-auto"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        onsubmit="clearForm()"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="874131d7-6f2b-4677-9c7a-85e61e6f5d42"
+        />
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea
+            class="form-control"
+            id="message"
+            name="message"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </section>
+     <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 SM Manager Seeker. All Rights Reserved</p>
+    </footer>
+    <button class="back-button" onclick="goBack()">Back</button>
+  <script>
+     function goBack() {
+            window.location.href = 'index.html'; 
+        }
+         function clearForm() {
+        // Clear the form fields
+        document.getElementById("contactForm").reset();
+      }
+    </script>
+    </script>
+  </body>
+</html>
